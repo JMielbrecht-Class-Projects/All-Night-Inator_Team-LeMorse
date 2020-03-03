@@ -35,8 +35,8 @@
    <widget class="QPushButton" name="coffeeButton">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>210</y>
+      <x>80</x>
+      <y>250</y>
       <width>111</width>
       <height>41</height>
      </rect>
@@ -48,8 +48,8 @@
    <widget class="QPushButton" name="lightButton">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>140</y>
+      <x>80</x>
+      <y>180</y>
       <width>111</width>
       <height>41</height>
      </rect>
@@ -61,8 +61,8 @@
    <widget class="QPushButton" name="blueButton">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>270</y>
+      <x>80</x>
+      <y>310</y>
       <width>111</width>
       <height>41</height>
      </rect>
@@ -71,7 +71,7 @@
      <string>BLUE</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="label_start">
     <property name="geometry">
      <rect>
       <x>620</x>
@@ -89,7 +89,7 @@
      <string>Start Time</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="labe_end">
     <property name="geometry">
      <rect>
       <x>620</x>
@@ -120,7 +120,7 @@
      <number>0</number>
     </property>
    </widget>
-   <widget class="QTimeEdit" name="timeEdit">
+   <widget class="QTimeEdit" name="startTime">
     <property name="geometry">
      <rect>
       <x>620</x>
@@ -130,7 +130,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QTimeEdit" name="timeEdit_2">
+   <widget class="QTimeEdit" name="endTime">
     <property name="geometry">
      <rect>
       <x>620</x>
