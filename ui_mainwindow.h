@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.14.1
+** Created by: Qt User Interface Compiler version 5.12.6
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -30,11 +30,11 @@ public:
     QPushButton *coffeeButton;
     QPushButton *lightButton;
     QPushButton *blueButton;
-    QLabel *label;
-    QLabel *label_2;
+    QLabel *label_start;
+    QLabel *labe_end;
     QProgressBar *timeToEnd;
-    QTimeEdit *timeEdit;
-    QTimeEdit *timeEdit_2;
+    QTimeEdit *startTime;
+    QTimeEdit *endTime;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -47,39 +47,126 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         motto = new QLabel(centralwidget);
         motto->setObjectName(QString::fromUtf8("motto"));
-        motto->setGeometry(QRect(220, 10, 431, 111));
+        motto->setGeometry(QRect(180, 20, 441, 111));
         QFont font;
         font.setPointSize(50);
         motto->setFont(font);
+        motto->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	border-color: rgb(0, 0, 255);\n"
+"  color: rgb(0, 0, 255);\n"
+"  background-color: rgb(255, 255, 0);\n"
+"  border-width: 3px;\n"
+"  border-style: solid;\n"
+"  border-radius:10px;\n"
+"  margin:0px;\n"
+"  padding:0px;\n"
+"}"));
         coffeeButton = new QPushButton(centralwidget);
         coffeeButton->setObjectName(QString::fromUtf8("coffeeButton"));
-        coffeeButton->setGeometry(QRect(90, 210, 111, 41));
+        coffeeButton->setGeometry(QRect(180, 230, 171, 81));
+        coffeeButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"  color: rgb(0, 0, 255);\n"
+"  background-color: rgb(255, 255, 0);\n"
+"  border-width: 3px;\n"
+"  border-style: solid;\n"
+"  border-radius:10px;\n"
+"  margin:0px;\n"
+"  padding:0px;\n"
+"}"));
         lightButton = new QPushButton(centralwidget);
         lightButton->setObjectName(QString::fromUtf8("lightButton"));
-        lightButton->setGeometry(QRect(90, 140, 111, 41));
+        lightButton->setGeometry(QRect(180, 140, 171, 81));
+        lightButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"  color: rgb(0, 0, 255);\n"
+"  background-color: rgb(255, 255, 0);\n"
+"  border-width: 3px;\n"
+"  border-style: solid;\n"
+"  border-radius:10px;\n"
+"  margin:0px;\n"
+"  padding:0px;\n"
+"}"));
         blueButton = new QPushButton(centralwidget);
         blueButton->setObjectName(QString::fromUtf8("blueButton"));
-        blueButton->setGeometry(QRect(90, 270, 111, 41));
-        label = new QLabel(centralwidget);
-        label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(620, 170, 101, 31));
+        blueButton->setGeometry(QRect(180, 320, 171, 81));
+        blueButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"  color: rgb(0, 0, 255);\n"
+"  background-color: rgb(255, 255, 0);\n"
+"  border-width: 3px;\n"
+"  border-style: solid;\n"
+"  border-radius:10px;\n"
+"  margin:0px;\n"
+"  padding:0px;\n"
+"}"));
+        label_start = new QLabel(centralwidget);
+        label_start->setObjectName(QString::fromUtf8("label_start"));
+        label_start->setGeometry(QRect(513, 140, 101, 31));
         QFont font1;
         font1.setPointSize(14);
-        label->setFont(font1);
-        label_2 = new QLabel(centralwidget);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(620, 290, 101, 21));
-        label_2->setFont(font1);
+        label_start->setFont(font1);
+        label_start->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	border-color: rgb(0, 0, 255);\n"
+"  color: rgb(0, 0, 255);\n"
+"  background-color: rgb(255, 255, 0);\n"
+"  border-width: 3px;\n"
+"  border-style: solid;\n"
+"  border-radius:10px;\n"
+"  margin:0px;\n"
+"  padding:0px;\n"
+"}"));
+        labe_end = new QLabel(centralwidget);
+        labe_end->setObjectName(QString::fromUtf8("labe_end"));
+        labe_end->setGeometry(QRect(523, 220, 91, 31));
+        labe_end->setFont(font1);
+        labe_end->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	border-color: rgb(0, 0, 255);\n"
+"  color: rgb(0, 0, 255);\n"
+"  background-color: rgb(255, 255, 0);\n"
+"  border-width: 3px;\n"
+"  border-style: solid;\n"
+"  border-radius:10px;\n"
+"  margin:0px;\n"
+"  padding:0px;\n"
+"}"));
         timeToEnd = new QProgressBar(centralwidget);
         timeToEnd->setObjectName(QString::fromUtf8("timeToEnd"));
-        timeToEnd->setGeometry(QRect(380, 420, 118, 23));
+        timeToEnd->setGeometry(QRect(493, 340, 121, 31));
+        timeToEnd->setStyleSheet(QString::fromUtf8("QProgressBar {\n"
+"	border-color: rgb(0, 0, 255);\n"
+"  color: rgb(0, 0, 255);\n"
+"  background-color: rgb(255, 255, 0);\n"
+"  border-width: 3px;\n"
+"  border-style: solid;\n"
+"  border-radius:10px;\n"
+"  margin:0px;\n"
+"  padding:0px;\n"
+"}"));
         timeToEnd->setValue(0);
-        timeEdit = new QTimeEdit(centralwidget);
-        timeEdit->setObjectName(QString::fromUtf8("timeEdit"));
-        timeEdit->setGeometry(QRect(620, 210, 118, 22));
-        timeEdit_2 = new QTimeEdit(centralwidget);
-        timeEdit_2->setObjectName(QString::fromUtf8("timeEdit_2"));
-        timeEdit_2->setGeometry(QRect(620, 330, 118, 22));
+        startTime = new QTimeEdit(centralwidget);
+        startTime->setObjectName(QString::fromUtf8("startTime"));
+        startTime->setGeometry(QRect(460, 180, 151, 31));
+        startTime->setStyleSheet(QString::fromUtf8("QTimeEdit {\n"
+"	border-color: rgb(0, 0, 255);\n"
+"  color: rgb(0, 0, 255);\n"
+"  background-color: rgb(255, 255, 0);\n"
+"  border-width: 3px;\n"
+"  border-style: solid;\n"
+"  border-radius:10px;\n"
+"  margin:0px;\n"
+"  padding:0px;\n"
+"}"));
+        endTime = new QTimeEdit(centralwidget);
+        endTime->setObjectName(QString::fromUtf8("endTime"));
+        endTime->setGeometry(QRect(460, 260, 151, 31));
+        endTime->setStyleSheet(QString::fromUtf8("QTimeEdit {\n"
+"	border-color: rgb(0, 0, 255);\n"
+"  color: rgb(0, 0, 255);\n"
+"  background-color: rgb(255, 255, 0);\n"
+"  border-width: 3px;\n"
+"  border-style: solid;\n"
+"  border-radius:10px;\n"
+"  margin:0px;\n"
+"  padding:0px;\n"
+"}"));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -96,13 +183,13 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        motto->setText(QCoreApplication::translate("MainWindow", "STAY AWAKE", nullptr));
-        coffeeButton->setText(QCoreApplication::translate("MainWindow", "COFFEE", nullptr));
-        lightButton->setText(QCoreApplication::translate("MainWindow", "LIGHTS", nullptr));
-        blueButton->setText(QCoreApplication::translate("MainWindow", "BLUE", nullptr));
-        label->setText(QCoreApplication::translate("MainWindow", "Start Time", nullptr));
-        label_2->setText(QCoreApplication::translate("MainWindow", "End Time", nullptr));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
+        motto->setText(QApplication::translate("MainWindow", "STAY AWAKE", nullptr));
+        coffeeButton->setText(QApplication::translate("MainWindow", "COFFEE", nullptr));
+        lightButton->setText(QApplication::translate("MainWindow", "LIGHTS", nullptr));
+        blueButton->setText(QApplication::translate("MainWindow", "BLUE", nullptr));
+        label_start->setText(QApplication::translate("MainWindow", "Start Time", nullptr));
+        labe_end->setText(QApplication::translate("MainWindow", "End Time", nullptr));
     } // retranslateUi
 
 };
