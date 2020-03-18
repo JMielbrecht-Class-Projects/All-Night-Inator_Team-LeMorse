@@ -71,7 +71,7 @@ public:
         coffeeButton->setFont(font1);
         coffeeButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	\n"
-"	background-color: rgb(0, 0, 0);\n"
+"	background-color: rgb(50, 50, 50);\n"
 "	image: url(:/Images/CoffeePot.jpg);\n"
 " 	color: rgb(255, 0, 0);\n"
 "}"));
@@ -88,7 +88,7 @@ public:
         lightButton->setFont(font2);
         lightButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	\n"
-"	background-color: rgb(0, 0, 0);\n"
+"	background-color: rgb(50,50, 50);\n"
 "	image: url(:/Images/Light.jpg);\n"
 "	color: rgb(255, 0, 0);\n"
 "}"));
@@ -104,7 +104,7 @@ public:
         blueButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	\n"
 "	\n"
-"	background-color: rgb(0, 0, 0);\n"
+"	background-color: rgb(50, 50, 50);\n"
 "	image: url(:/Images/BlueLight.jpg);\n"
 "  	color: rgb(255, 0, 0);\n"
 "}"));
@@ -184,7 +184,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1046, 21));
+        menubar->setGeometry(QRect(0, 0, 1046, 22));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));

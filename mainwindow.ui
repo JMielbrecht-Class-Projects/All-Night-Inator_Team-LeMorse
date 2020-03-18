@@ -61,7 +61,7 @@
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	
-	background-color: rgb(0, 0, 0);
+	background-color: rgb(50, 50, 50);
 	image: url(:/Images/CoffeePot.jpg);
  	color: rgb(255, 0, 0);
 }</string>
@@ -92,7 +92,7 @@
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	
-	background-color: rgb(0, 0, 0);
+	background-color: rgb(50,50, 50);
 	image: url(:/Images/Light.jpg);
 	color: rgb(255, 0, 0);
 }</string>
@@ -122,7 +122,7 @@
      <string notr="true">QPushButton {
 	
 	
-	background-color: rgb(0, 0, 0);
+	background-color: rgb(50, 50, 50);
 	image: url(:/Images/BlueLight.jpg);
   	color: rgb(255, 0, 0);
 }</string>
@@ -305,7 +305,7 @@ LIGHT</string>
      <rect>
       <x>430</x>
       <y>410</y>
-      <width>141</width>
+      <width>151</width>
       <height>41</height>
      </rect>
     </property>
@@ -331,7 +331,7 @@ LIGHT</string>
      <x>0</x>
      <y>0</y>
      <width>1046</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>
