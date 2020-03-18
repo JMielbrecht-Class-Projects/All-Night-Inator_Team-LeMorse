@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "httpmanager.h"
+#include "bluelight.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -34,7 +35,9 @@ void MainWindow::on_coffeeButton_clicked()
 
 void MainWindow::on_blueButton_clicked()
 {
-
+    BlueLight blueLight;
+    blueLight.setModal(true);
+    blueLight.exec();
 }
 
 

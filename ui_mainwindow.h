@@ -35,6 +35,10 @@ public:
     QProgressBar *timeToEnd;
     QTimeEdit *startTime;
     QTimeEdit *endTime;
+    QLabel *title;
+    QLabel *dare;
+    QLabel *prompt;
+    QLabel *label_start_2;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -42,135 +46,145 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(800, 600);
+        MainWindow->resize(1046, 849);
+        MainWindow->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 0, 0);"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         motto = new QLabel(centralwidget);
         motto->setObjectName(QString::fromUtf8("motto"));
-        motto->setGeometry(QRect(180, 20, 441, 111));
+        motto->setGeometry(QRect(330, 170, 391, 61));
         QFont font;
-        font.setPointSize(50);
+        font.setFamily(QString::fromUtf8("Viner Hand ITC"));
+        font.setPointSize(40);
         motto->setFont(font);
         motto->setStyleSheet(QString::fromUtf8("QLabel {\n"
-"	border-color: rgb(0, 0, 255);\n"
-"  color: rgb(0, 0, 255);\n"
-"  background-color: rgb(255, 255, 0);\n"
-"  border-width: 3px;\n"
-"  border-style: solid;\n"
-"  border-radius:10px;\n"
-"  margin:0px;\n"
-"  padding:0px;\n"
+"	color: rgb(255, 0, 0)\n"
 "}"));
         coffeeButton = new QPushButton(centralwidget);
         coffeeButton->setObjectName(QString::fromUtf8("coffeeButton"));
-        coffeeButton->setGeometry(QRect(180, 230, 171, 81));
+        coffeeButton->setGeometry(QRect(410, 620, 161, 161));
+        QFont font1;
+        font1.setFamily(QString::fromUtf8("Viner Hand ITC"));
+        font1.setPointSize(26);
+        font1.setBold(true);
+        font1.setWeight(75);
+        coffeeButton->setFont(font1);
         coffeeButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"  color: rgb(0, 0, 255);\n"
-"  background-color: rgb(255, 255, 0);\n"
-"  border-width: 3px;\n"
-"  border-style: solid;\n"
-"  border-radius:10px;\n"
-"  margin:0px;\n"
-"  padding:0px;\n"
+"	\n"
+"	background-color: rgb(0, 0, 0);\n"
+"	image: url(:/Images/CoffeePot.jpg);\n"
+" 	color: rgb(255, 0, 0);\n"
 "}"));
         lightButton = new QPushButton(centralwidget);
         lightButton->setObjectName(QString::fromUtf8("lightButton"));
-        lightButton->setGeometry(QRect(180, 140, 171, 81));
+        lightButton->setGeometry(QRect(250, 620, 141, 161));
+        QFont font2;
+        font2.setFamily(QString::fromUtf8("Viner Hand ITC"));
+        font2.setPointSize(28);
+        font2.setBold(true);
+        font2.setUnderline(false);
+        font2.setWeight(75);
+        font2.setStrikeOut(false);
+        lightButton->setFont(font2);
         lightButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"  color: rgb(0, 0, 255);\n"
-"  background-color: rgb(255, 255, 0);\n"
-"  border-width: 3px;\n"
-"  border-style: solid;\n"
-"  border-radius:10px;\n"
-"  margin:0px;\n"
-"  padding:0px;\n"
+"	\n"
+"	background-color: rgb(0, 0, 0);\n"
+"	image: url(:/Images/Light.jpg);\n"
+"	color: rgb(255, 0, 0);\n"
 "}"));
         blueButton = new QPushButton(centralwidget);
         blueButton->setObjectName(QString::fromUtf8("blueButton"));
-        blueButton->setGeometry(QRect(180, 320, 171, 81));
+        blueButton->setGeometry(QRect(590, 620, 151, 161));
+        QFont font3;
+        font3.setFamily(QString::fromUtf8("Viner Hand ITC"));
+        font3.setPointSize(22);
+        font3.setBold(true);
+        font3.setWeight(75);
+        blueButton->setFont(font3);
         blueButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"  color: rgb(0, 0, 255);\n"
-"  background-color: rgb(255, 255, 0);\n"
-"  border-width: 3px;\n"
-"  border-style: solid;\n"
-"  border-radius:10px;\n"
-"  margin:0px;\n"
-"  padding:0px;\n"
+"	\n"
+"	\n"
+"	background-color: rgb(0, 0, 0);\n"
+"	image: url(:/Images/BlueLight.jpg);\n"
+"  	color: rgb(255, 0, 0);\n"
 "}"));
         label_start = new QLabel(centralwidget);
         label_start->setObjectName(QString::fromUtf8("label_start"));
-        label_start->setGeometry(QRect(513, 140, 101, 31));
-        QFont font1;
-        font1.setPointSize(14);
-        label_start->setFont(font1);
+        label_start->setGeometry(QRect(290, 300, 171, 41));
+        QFont font4;
+        font4.setFamily(QString::fromUtf8("Viner Hand ITC"));
+        font4.setPointSize(20);
+        label_start->setFont(font4);
         label_start->setStyleSheet(QString::fromUtf8("QLabel {\n"
-"	border-color: rgb(0, 0, 255);\n"
-"  color: rgb(0, 0, 255);\n"
-"  background-color: rgb(255, 255, 0);\n"
-"  border-width: 3px;\n"
-"  border-style: solid;\n"
-"  border-radius:10px;\n"
-"  margin:0px;\n"
-"  padding:0px;\n"
+"	color: rgb(255, 0, 0);\n"
 "}"));
         labe_end = new QLabel(centralwidget);
         labe_end->setObjectName(QString::fromUtf8("labe_end"));
-        labe_end->setGeometry(QRect(523, 220, 91, 31));
-        labe_end->setFont(font1);
+        labe_end->setGeometry(QRect(570, 300, 151, 41));
+        labe_end->setFont(font4);
         labe_end->setStyleSheet(QString::fromUtf8("QLabel {\n"
-"	border-color: rgb(0, 0, 255);\n"
-"  color: rgb(0, 0, 255);\n"
-"  background-color: rgb(255, 255, 0);\n"
-"  border-width: 3px;\n"
-"  border-style: solid;\n"
-"  border-radius:10px;\n"
-"  margin:0px;\n"
-"  padding:0px;\n"
+"	color: rgb(255, 0, 0);\n"
 "}"));
         timeToEnd = new QProgressBar(centralwidget);
         timeToEnd->setObjectName(QString::fromUtf8("timeToEnd"));
-        timeToEnd->setGeometry(QRect(493, 340, 121, 31));
+        timeToEnd->setGeometry(QRect(430, 480, 141, 31));
         timeToEnd->setStyleSheet(QString::fromUtf8("QProgressBar {\n"
-"	border-color: rgb(0, 0, 255);\n"
-"  color: rgb(0, 0, 255);\n"
-"  background-color: rgb(255, 255, 0);\n"
-"  border-width: 3px;\n"
-"  border-style: solid;\n"
-"  border-radius:10px;\n"
-"  margin:0px;\n"
-"  padding:0px;\n"
+"	alternate-background-color: rgb(255, 0, 0);\n"
+"	color: rgb(255, 0, 0);\n"
+"	background-color: rgb(0, 0, 0);\n"
+"	border-color: rgb(255, 255, 255);\n"
 "}"));
         timeToEnd->setValue(0);
         startTime = new QTimeEdit(centralwidget);
         startTime->setObjectName(QString::fromUtf8("startTime"));
-        startTime->setGeometry(QRect(460, 180, 151, 31));
+        startTime->setGeometry(QRect(290, 360, 151, 31));
         startTime->setStyleSheet(QString::fromUtf8("QTimeEdit {\n"
-"	border-color: rgb(0, 0, 255);\n"
-"  color: rgb(0, 0, 255);\n"
-"  background-color: rgb(255, 255, 0);\n"
-"  border-width: 3px;\n"
-"  border-style: solid;\n"
-"  border-radius:10px;\n"
-"  margin:0px;\n"
-"  padding:0px;\n"
+"	color: rgb(255, 0, 0);\n"
+"	background-color: rgb(0, 0, 0);\n"
 "}"));
         endTime = new QTimeEdit(centralwidget);
         endTime->setObjectName(QString::fromUtf8("endTime"));
-        endTime->setGeometry(QRect(460, 260, 151, 31));
+        endTime->setGeometry(QRect(570, 360, 151, 31));
         endTime->setStyleSheet(QString::fromUtf8("QTimeEdit {\n"
-"	border-color: rgb(0, 0, 255);\n"
-"  color: rgb(0, 0, 255);\n"
-"  background-color: rgb(255, 255, 0);\n"
-"  border-width: 3px;\n"
-"  border-style: solid;\n"
-"  border-radius:10px;\n"
-"  margin:0px;\n"
-"  padding:0px;\n"
+"	color: rgb(255, 0, 0);\n"
+"	background-color: rgb(0, 0, 0);\n"
+"}"));
+        title = new QLabel(centralwidget);
+        title->setObjectName(QString::fromUtf8("title"));
+        title->setGeometry(QRect(110, 10, 811, 141));
+        QFont font5;
+        font5.setFamily(QString::fromUtf8("Viner Hand ITC"));
+        font5.setPointSize(60);
+        title->setFont(font5);
+        title->setStyleSheet(QString::fromUtf8("color: rgb(255, 0, 0);"));
+        dare = new QLabel(centralwidget);
+        dare->setObjectName(QString::fromUtf8("dare"));
+        dare->setGeometry(QRect(400, 240, 231, 41));
+        QFont font6;
+        font6.setFamily(QString::fromUtf8("Viner Hand ITC"));
+        font6.setPointSize(24);
+        dare->setFont(font6);
+        dare->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	color: rgb(255, 0, 0)\n"
+"}"));
+        prompt = new QLabel(centralwidget);
+        prompt->setObjectName(QString::fromUtf8("prompt"));
+        prompt->setGeometry(QRect(250, 570, 221, 33));
+        QFont font7;
+        font7.setFamily(QString::fromUtf8("Viner Hand ITC"));
+        prompt->setFont(font7);
+        prompt->setStyleSheet(QString::fromUtf8("color: rgb(255, 0, 0);"));
+        label_start_2 = new QLabel(centralwidget);
+        label_start_2->setObjectName(QString::fromUtf8("label_start_2"));
+        label_start_2->setGeometry(QRect(430, 410, 141, 41));
+        label_start_2->setFont(font4);
+        label_start_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"	color: rgb(255, 0, 0);\n"
 "}"));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 21));
+        menubar->setGeometry(QRect(0, 0, 1046, 21));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -187,9 +201,14 @@ public:
         motto->setText(QApplication::translate("MainWindow", "STAY AWAKE", nullptr));
         coffeeButton->setText(QApplication::translate("MainWindow", "COFFEE", nullptr));
         lightButton->setText(QApplication::translate("MainWindow", "LIGHTS", nullptr));
-        blueButton->setText(QApplication::translate("MainWindow", "BLUE", nullptr));
-        label_start->setText(QApplication::translate("MainWindow", "Start Time", nullptr));
-        labe_end->setText(QApplication::translate("MainWindow", "End Time", nullptr));
+        blueButton->setText(QApplication::translate("MainWindow", "BLUE \n"
+"LIGHT", nullptr));
+        label_start->setText(QApplication::translate("MainWindow", "START TIME", nullptr));
+        labe_end->setText(QApplication::translate("MainWindow", "END TIME", nullptr));
+        title->setText(QApplication::translate("MainWindow", "ALL-NIGHT-INATOR", nullptr));
+        dare->setText(QApplication::translate("MainWindow", "(IF YOU DARE)", nullptr));
+        prompt->setText(QApplication::translate("MainWindow", "I NEED SOME...", nullptr));
+        label_start_2->setText(QApplication::translate("MainWindow", "PROGRESS", nullptr));
     } // retranslateUi
 
 };
