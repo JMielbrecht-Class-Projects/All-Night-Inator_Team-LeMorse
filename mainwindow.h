@@ -35,10 +35,11 @@ private:
     Ui::MainWindow *ui;
 
     //Following vars used for progress bar
-    int timeSinceStart;
-    int timeLine;
+    long long int timeSinceStart;
+    long long int timeLine;
+    double decTimeLeft;
     int percentTimeLeft;
-    QTime duration;
+
     HttpManager *webManager;
 };
 #endif // MAINWINDOW_H

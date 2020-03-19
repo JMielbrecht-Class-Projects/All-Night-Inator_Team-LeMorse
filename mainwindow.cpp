@@ -54,8 +54,8 @@ void MainWindow::on_endTime_userTimeChanged(const QTime &time)
    ui->endTime->setTime(time);
    timeSinceStart = ui->startTime->time().secsTo(QDateTime::currentDateTime().time());
    timeLine = ui->startTime->time().secsTo(ui->endTime->time());
-   percentTimeLeft = (timeSinceStart/timeLine) * 100;
-
+   decTimeLeft = timeSinceStart/timeLine;
+   percentTimeLeft = (decTimeLeft) * 100;
    ui->timeToEnd->setValue(percentTimeLeft);
 
    //DEBUGGING:
@@ -63,6 +63,7 @@ void MainWindow::on_endTime_userTimeChanged(const QTime &time)
    qDebug() << "currentDateTime: " << QTime::currentTime().toString("hms");
    std::cout << "timeSinceStart: " << timeSinceStart << std::endl;
    std::cout << "timeLine: " << timeLine << std::endl;
+   qDebug() << "decTimeLeft: " << qSetRealNumberPrecision(5) << decTimeLeft;
    std::cout << "percentTimeLeft: " << percentTimeLeft << std::endl;
 }
 
@@ -71,14 +72,16 @@ void MainWindow::on_startTime_timeChanged(const QTime &time)
     ui->startTime->setTime(time);
     timeSinceStart = ui->startTime->time().msecsTo(QTime::currentTime());
     timeLine = ui->startTime->time().msecsTo(ui->endTime->time());
-    percentTimeLeft = (timeSinceStart/timeLine) * 100;
+    decTimeLeft = timeSinceStart/timeLine;
+    percentTimeLeft = (decTimeLeft) * 100;
     ui->timeToEnd->setValue(percentTimeLeft);
 
    //DEBUGGING:
    qDebug() << "START TIME CHANGED";
-   qDebug() << "currentDateTime: " << QTime::currentTime().toString("hms");
+   qDebug() << "currentTime: " << QTime::currentTime().toString("hms");
    qDebug() << "timeSinceStart: " << timeSinceStart;
    qDebug() << "timeLine: " << timeLine;
+   qDebug() << "decTimeLeft: " << qSetRealNumberPrecision(5) << decTimeLeft;
    qDebug() << "percentTimeLeft: " << percentTimeLeft;
 
 }
