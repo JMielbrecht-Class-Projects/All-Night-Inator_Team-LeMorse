@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QTime>
+#include "httpmanager.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -16,6 +17,10 @@ public:
     ~MainWindow();
 
 private slots:
+    void processCoffeeJson(QJsonObject *json);
+
+    void processLightsJson(QJsonObject *json);
+
     void on_lightButton_clicked();
 
     void on_coffeeButton_clicked();
@@ -28,9 +33,12 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+
     //Following vars used for progress bar
     int timeSinceStart;
     int timeLine;
     int percentTimeLeft;
+    QTime duration;
+    HttpManager *webManager;
 };
 #endif // MAINWINDOW_H
