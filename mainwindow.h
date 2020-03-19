@@ -22,8 +22,15 @@ private slots:
 
     void on_blueButton_clicked();
 
+    void on_endTime_userTimeChanged(const QTime &time);
+
+    void on_startTime_timeChanged(const QTime &time);
+
 private:
     Ui::MainWindow *ui;
-    QTime duration;
+    //Following vars used for progress bar
+    int timeSinceStart;
+    int timeLine;
+    int percentTimeLeft;
 };
 #endif // MAINWINDOW_H
